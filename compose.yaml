@@ -21,6 +21,8 @@ services:
     image: ghcr.io/salihkkus/resumise-ai-engine:latest
     container_name: resumise-ai-api
     restart: unless-stopped
+    environment:
+      GEMINI_API_KEY: ${GEMINI_API_KEY}
     ports:
       - "${AI_API_PORT}:8000"
 
